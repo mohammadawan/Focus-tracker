@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-electron/
+.env
+*.local
+prisma/migrations/
+ml/dataset/raw/focused/*
+ml/dataset/raw/distracted/*
+!ml/dataset/raw/focused/.gitkeep
+!ml/dataset/raw/distracted/.gitkeep
+ml/processed/*.json
+ml/models/*.json
+ml/reports/*.json

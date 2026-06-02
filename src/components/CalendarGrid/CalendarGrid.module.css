@@ -1,0 +1,154 @@
+.wrap {
+  position: relative;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 19px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.25), rgba(34,211,238,0.06), rgba(124,58,237,0.06));
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 20, 0.82);
+  border-radius: 18px;
+  padding: 20px 20px 16px;
+  backdrop-filter: blur(40px);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgba(168, 85, 247, 0.8);
+  margin: 0 0 3px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navBtn {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  color: rgba(255,255,255,0.7);
+  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  line-height: 1;
+  padding: 0;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: rgba(139, 92, 246, 0.24);
+  color: #fff;
+}
+
+.navBtn:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+.monthLabel {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  min-width: 130px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.dayHeader {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.28);
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-bottom: 4px;
+}
+
+.cell {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 7px 4px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 62px;
+  transition: border-color 0.15s;
+}
+
+.cell:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.cellToday {
+  border-color: rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.07);
+}
+
+.dayNum {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  line-height: 1;
+}
+
+.dayNumToday {
+  color: #c4b5fd;
+}
+
+.barTrack {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 4px 4px 2px 2px;
+  min-height: 3px;
+}
+
+.scoreLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  line-height: 1;
+}
