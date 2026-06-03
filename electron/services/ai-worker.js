@@ -81,7 +81,7 @@ async function analyzeWithLocalModel(screenshotPaths, taskName) {
 async function analyzeWithGroq(screenshotUrls, taskName) {
   const https = require('https')
 
-  const sampled = sampleEvenly(screenshotUrls, 10)
+  const sampled = sampleEvenly(screenshotUrls, 15)
   const imageContents = sampled.map(url => ({ type: 'image_url', image_url: { url } }))
 
   const prompt = `You are a productivity analyst. The user's assigned task was: "${taskName}".

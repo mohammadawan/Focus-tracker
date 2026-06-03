@@ -15,18 +15,18 @@ function planScreenshotTimes(totalSeconds) {
   const times = []
   const minutes = Math.floor(totalSeconds / 60)
   for (let m = 0; m < minutes; m++) {
-    for (let w = 0; w < 3; w++) {
-      const offset = w * 20 + Math.random() * 20
+    for (let w = 0; w < 2; w++) {
+      const offset = w * 30 + Math.random() * 30
       const t = m * 60 + offset
       if (t < totalSeconds) times.push(t)
     }
   }
   // Tail seconds (<60s leftover): proportional shots
   const tail = totalSeconds - minutes * 60
-  if (tail >= 20) {
-    const extras = Math.floor(tail / 20)
+  if (tail >= 30) {
+    const extras = Math.floor(tail / 30)
     for (let w = 0; w < extras; w++) {
-      times.push(minutes * 60 + w * 20 + Math.random() * 20)
+      times.push(minutes * 60 + w * 30 + Math.random() * 30)
     }
   }
   return times
