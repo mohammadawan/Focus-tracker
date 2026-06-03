@@ -9,6 +9,7 @@ import Auth from '../../pages/Auth/Auth.jsx'
 import Dashboard from '../../pages/Dashboard/Dashboard.jsx'
 import FocusSession from '../../pages/FocusSession/FocusSession.jsx'
 import Reports from '../../pages/Reports/Reports.jsx'
+import History from '../../pages/History/History.jsx'
 import styles from './App.module.css'
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
           >
             {page === 'dashboard' && <Dashboard onStartSession={setActiveSession} />}
             {page === 'reports' && <Reports />}
+            {page === 'history' && <History />}
           </motion.div>
         </AnimatePresence>
       </main>

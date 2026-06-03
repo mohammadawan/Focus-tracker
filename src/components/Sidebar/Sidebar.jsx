@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import NavItem from './NavItem.jsx'
-import { DashIcon, ChartIcon, SignOutIcon } from '../icons/index.js'
+import { DashIcon, ChartIcon, StackIcon, SignOutIcon } from '../icons/index.js'
 import { initialsFromEmail } from '../../utils/time.js'
 import styles from './Sidebar.module.css'
 
 const NAV_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', icon: <DashIcon /> },
   { id: 'reports', label: 'Reports', icon: <ChartIcon /> },
+  { id: 'history', label: 'History', icon: <StackIcon /> },
 ]
 
 export default function Sidebar({ user, page, onNavigate, onLogout }) {

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import api from '../../lib/api.js'
 import { scoreColor, scoreTone } from '../../utils/score.js'
 import StatCard from '../../components/StatCard/StatCard.jsx'
-import SessionCard from '../../components/SessionCard/SessionCard.jsx'
 import FocusChart from '../../components/FocusChart/FocusChart.jsx'
 import {
   SparkleIcon,
@@ -102,14 +101,6 @@ export default function Reports() {
 
           <FocusChart data={data} />
 
-          <div>
-            <p className={styles.sectionLabel}>Session History</p>
-            <div className={styles.list}>
-              {allSessions.map((sess, i) => (
-                <SessionCard key={sess.id} sess={sess} i={i} />
-              ))}
-            </div>
-          </div>
         </>
       )}
     </div>
